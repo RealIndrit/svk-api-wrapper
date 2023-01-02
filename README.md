@@ -1,24 +1,24 @@
 # SVK API Wrapper
 
-# FlowHelper
+## FlowHelper
 Returns grid flow at specific time instance (updated in 1 minute intervals) (MW)
 Params:
    1. ticks: unixtime milliseconds
-# FrequncyHelper
+## FrequncyHelper
 Returns local (swedish) grid frequency health at specific time scope (updated in 1 seconds intervals) (Hz)
 Params:
    1. lower_unix: unixtime milliseconds
    2. upper_unix: unixtime milliseconds
-# PriceHelper
+## PriceHelper
 Returns price of production zones at specific time instance (updated in 1 minute intervals) (euro/MWh)
 Params:
    1. ticks: unixtime milliseconds
-# ProductionHelper
+## ProductionHelper
 Returns production of given zone scope (1 minute intervals) (MW)
 Params:
    1. date: date format (YYYY-MM-DD)
    2. countryCode: target zone (SE, FI, NO, etc...)
-# SituationHelper
+## SituationHelper
 Returns prediction vs actual (Swedish grid zones ONLY) (1 hour intervals) (MW)
 Params:
    1. date: date format (YYYY-MM-DD)
