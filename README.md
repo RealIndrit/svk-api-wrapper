@@ -5,7 +5,7 @@ API wrapper for Svenska Kraftnät, accesses the same api endpoints as "kontrollr
 Returns grid flow at specific time instance (updated in 1 minute intervals) (MW)
 Params:
    1. ticks: unixtime milliseconds
-## FrequncyHelper
+## FrequencyHelper
 Returns local (swedish) grid frequency health at specific time scope (updated in 1 seconds intervals) (Hz)
 Params:
    1. lower_unix: unixtime milliseconds
