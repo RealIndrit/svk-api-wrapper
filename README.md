@@ -1,4 +1,5 @@
 # SVK API Wrapper
+API wrapper for Svenska Kraftnät, accesses the same api endpoints as "kontrollrummet" (Swedish Electricity grid status website)
 
 ## FlowHelper
 Returns grid flow at specific time instance (updated in 1 minute intervals) (MW)
