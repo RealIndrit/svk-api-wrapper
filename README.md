@@ -2,25 +2,38 @@
 API wrapper for Svenska Kraftnät, accesses the same api endpoints as "kontrollrummet" (Swedish Electricity grid status website)
 
 ## FlowHelper
-Returns grid flow at specific time instance (updated in 1 minute intervals) (MW)
+Info: Grid flow at specific time instance (updated in 1 minute intervals) 
+Returns Float  (MW)
 Params:
-   1. ticks: unixtime milliseconds
+   1. ticks: UnixMillisecondSecond type (XXXXXXXXXX000)
+   
 ## FrequencyHelper
-Returns local (swedish) grid frequency health at specific time scope (updated in 1 seconds intervals) (Hz)
+Info: Local (swedish) grid frequency health at specific time scope (updated in 1 minute intervals, with 60 datapoints for each interval cycle) 
+Returns: Float (Hz)
 Params:
-   1. lower_unix: unixtime milliseconds
-   2. upper_unix: unixtime milliseconds
+   1. lower_unix: UnixMillisecondSecond type (XXXXXXXXXX000)
+   2. upper_unix: UnixMillisecondSecond type (XXXXXXXXXX000)
+
 ## PriceHelper
-Returns price of production zones at specific time instance (updated in 1 minute intervals) (euro/MWh)
+Info: Price of production zones at specific time instance (updated in 1 minute intervals)
+Returns Float (euro/MWh)
 Params:
-   1. ticks: unixtime milliseconds
+   1. ticks: UnixMillisecondSecond type (XXXXXXXXXX000)
+
 ## ProductionHelper
-Returns production of given zone scope (1 minute intervals) (MW)
+Info: Production of given zone scope (1 minute intervals)
+Returns: Int (MW)
 Params:
-   1. date: date format (YYYY-MM-DD)
-   2. countryCode: target zone (SE, FI, NO, etc...)
+   1. date: DateDay type (YYYY-MM-DD)
+   2. countryCode: target zone ("SE", "FI", "NO", etc...)
+   
 ## SituationHelper
-Returns prediction vs actual (Swedish grid zones ONLY) (1 hour intervals) (MW)
+Info: Prediction vs actual (Swedish grid zones ONLY) (1 hour intervals)
+Returns: Planned: Float (MW), Result: Int (MW)
 Params:
-   1. date: date format (YYYY-MM-DD)
-   2. biddingArea: target region (SE1, SE2, SE3, SE4, TO)
+   1. date: DateDay type (YYYY-MM-DD)
+   2. biddingArea: target region ("SE1", "SE2", "SE3", "SE4", "TO")
+
+
+## TODO:
+   1. Add CountryCode and Region Types
